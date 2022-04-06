@@ -337,6 +337,48 @@ background-position: left;
     }
 }
 
+.video-fashion{
+    background-image: url(../images/decor/pattern.svg);
+    background-color: $bg;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 125px 0;
+    &__inner{
+        display: flex;
+    }
+    &__popup{
+        margin-right: 60px;
+        height: 480px;
+        width: 535px;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__content{
+        max-width: 570px;
+    }
+    &__subtitle{
+        font-size: 22px;
+        color: $accent;
+        padding-top: 75px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    &__title{
+        text-align-last: left;
+    }
+    &__text{
+        margin-bottom: 55px;
+    }
+    &__link{
+        @extend %btn;
+        padding: 12px 41px;
+    }
+}
 
 
 
