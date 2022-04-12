@@ -820,5 +820,30 @@ footer {
     }
 }
 
+.page-404{
+    padding: 110px 0 115px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content{
+        max-width: 570px;
+        width: 100%;
+    }
+    &__title{
+        color: #28384f;
+        @extend %roboto-700;
+        margin-bottom: 20px;
+    }
+    &__text{
+        margin-bottom: 55px;
+        max-width: 500px;
+    }
+    &__link{
+        @extend %btn;
+    }
+}
+
 
 @import 'media';
