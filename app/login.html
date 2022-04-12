@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARCHO</title>
+    <title>MARCHO Login</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -73,6 +73,31 @@
             </div>
         </section>
         
+        <section class="modal">
+            <div class="container">
+                <div class="modal__links">
+                    <a class="modal__link" href="#">REGISTER</a>
+                    <a class="modal__link modal__link--active" href="#">LOGIN</a>
+                </div>
+                <form class="mocal__form" action="#">
+                    <label class="modal__label">
+                        Username or email address*
+                        <input class="modal__input" type="text" required>
+                    </label>
+                    <label class="modal__label">
+                        Password*
+                        <input class="modal__input" type="password" required>
+                    </label>
+                    <label class="modal__label">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <button class="modal__btn" type="submit">LOG IN</button>
+                    <a class="modal__error" href="#">Lost your password?</a>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
