@@ -35,9 +35,11 @@ $bg: #f6f6f6;
     box-shadow: 0px 10px 25px 0px rgba(254, 62, 87, 0.3);
     color: #fff;
     padding: 12px 26px;
+    cursor: pointer;
 }
 
-%checkbox-hidden {
+%checkbox-hidden,
+%radio-hidden {
     width: 1px;
     height: 1px;
     overflow: hidden;
