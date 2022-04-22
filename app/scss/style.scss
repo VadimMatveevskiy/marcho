@@ -1730,6 +1730,7 @@ footer {
 .comment-form {
     border-bottom: 1px solid #f0f0f0;
     padding-bottom: 60px;
+
     &__title {
         color: $title;
         font-size: 22px;
@@ -1774,7 +1775,8 @@ footer {
 
     &__radio {
         cursor: pointer;
-        path{
+
+        path {
             fill: $default;
         }
     }
@@ -1809,85 +1811,103 @@ footer {
     }
 }
 
-.related{
+.related {
     padding: 50px 0 120px;
-    &__title{
+
+    &__title {
         margin-bottom: 50px;
     }
-    &__items{
+
+    &__items {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 30px;
-        .product-item__img-box{
+
+        .product-item__img-box {
             height: auto;
         }
-        .product-item__title{
+
+        .product-item__title {
             padding: 5px 0;
         }
     }
 }
 
-.blog-page{
+.blog-page {
     padding: 120px 0 60px;
-    &__inner{
+
+    &__inner {
         display: flex;
         justify-content: space-between;
     }
-    &__content{
+
+    &__content {
         width: 770px;
         margin-right: 30px;
     }
-    &__aside{
+
+    &__aside {
         width: 370px;
     }
-    &__item{
+
+    &__item {
         margin-bottom: 60px;
         position: relative;
-        &.blog-page__item--no-image{
+
+        &.blog-page__item--no-image {
             box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
         }
     }
-    &__item-box{
+
+    &__item-box {
         padding: 45px 40px 40px 40px;
         border: 1px solid #ececec;
     }
-    &__img{
+
+    &__img {
         max-width: 770px;
         height: 450px;
         object-fit: cover;
     }
-    &__item-play{
+
+    &__item-play {
         position: absolute;
         right: 0;
         left: 0;
         margin: 0 auto;
         top: 170px;
     }
-    &__item-title{
+
+    &__item-title {
         margin-bottom: 30px;
         color: $title;
         @extend %roboto-500;
         font-size: 22px;
         transition: all .2s;
-        &:hover{
+
+        &:hover {
             color: $accent;
         }
     }
-    &__item-info{
+
+    &__item-info {
         display: flex;
         justify-content: start;
         margin-bottom: 30px;
     }
-    &__item-author{
+
+    &__item-author {
         margin-right: 17px;
     }
-    &__item-slider{
-        .blog-page__item-box{
-          margin-top: -19px;
+
+    &__item-slider {
+        .blog-page__item-box {
+            margin-top: -19px;
         }
     }
-    &__slider{
-        .slick-arrow{
+
+    &__slider {
+        .slick-arrow {
             position: absolute;
             font-size: 0;
             padding: 0;
@@ -1903,33 +1923,39 @@ footer {
             cursor: pointer;
             top: 200px;
             background-color: $accent;
-            path{
+
+            path {
                 fill: #fff;
             }
-            
+
         }
-        .slick-disabled{
+
+        .slick-disabled {
             background-color: #fff;
             box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
-            path{
+
+            path {
                 fill: $accent;
             }
         }
-        .slick-prev{
+
+        .slick-prev {
             left: 40px;
         }
-        .slick-next{
+
+        .slick-next {
             right: 40px;
         }
-    }      
+    }
 }
 
-.person{
+.person {
     border: 1px solid #ececec;
     margin-bottom: 40px;
     text-align: center;
     padding: 40px 25px;
-    &__img{
+
+    &__img {
         display: inline-block;
         width: 160px;
         height: 160px;
@@ -1937,68 +1963,82 @@ footer {
         margin: 0 auto;
         margin-bottom: 35px;
     }
-    &__name{
+
+    &__name {
         color: $title;
         @extend %roboto-700;
         font-size: 18px;
     }
-    &__position{
+
+    &__position {
         color: $accent;
         margin-bottom: 25px;
     }
-    &__text{
+
+    &__text {
         margin-bottom: 30px;
     }
-    &__social-link{
+
+    &__social-link {
         margin-right: 15px;
-        path{
+
+        path {
             fill: $default;
             transition: all .3s;
         }
-        &:hover{
-            path{
+
+        &:hover {
+            path {
                 fill: $accent;
             }
         }
     }
 }
 
-.latest-post{
+.latest-post {
     padding: 35px 30px 40px;
     border: 1px solid #ececec;
     margin-bottom: 40px;
-    &__title{
+
+    &__title {
         text-transform: uppercase;
         color: $title;
         @extend %roboto-400;
         font-size: 22px;
         margin-bottom: 35px;
     }
-    &__item{
+
+    &__item {
         display: flex;
         margin-bottom: 20px;
-        & +.latest-post__item{
+
+        &+.latest-post__item {
             border-top: 1px solid #ececec;
             padding-top: 20px;
-        } 
+        }
     }
-    &__img-link{
+
+    &__img-link {
         margin-right: 15px;
     }
-    &__item-img{
+
+    &__item-img {
         min-width: 80px;
         height: 80px;
         object-fit: cover;
     }
-    &__item-title{
+
+    &__item-title {
         font-size: 18px;
         @extend %roboto-400;
         color: $title;
     }
-    &__item-date{
+
+    &__item-date {
         position: relative;
         padding-left: 26px;
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             width: 16px;
@@ -2011,45 +2051,52 @@ footer {
     }
 }
 
-.blog-one{
-    &__title{
+.blog-one {
+    &__title {
         margin: 35px 0 25px;
         font-size: 24px;
         @extend %roboto-700;
         color: $title;
     }
-    &__form-title{
+
+    &__form-title {
         margin: 35px 0 25px;
         color: $title;
         font-size: 24px;
         @extend %roboto-700;
         text-transform: uppercase;
     }
-    &__left-img{
+
+    &__left-img {
         float: left;
         margin-right: 25px;
         margin-bottom: 10px;
     }
-    &__right-img{
+
+    &__right-img {
         float: right;
         margin-left: 25px;
         margin-bottom: 10px;
     }
-    &__text{
+
+    &__text {
         border: 1px solid #ececec;
         border-top: none;
         padding: 30px;
         margin-top: -1px;
-        h4{
+
+        h4 {
             @extend %roboto-500;
             color: $title;
             font-size: 22px;
             margin: 25px 0;
         }
-        p{
+
+        p {
             margin: 25px 0;
         }
-        blockquote{
+
+        blockquote {
             background-color: $bg;
             border-left: 3px solid $accent;
             font-size: 22px;
@@ -2059,15 +2106,18 @@ footer {
             line-height: 32px;
         }
     }
-    &__info{
+
+    &__info {
         display: flex;
         margin-bottom: 25px;
     }
-    &__info-link{
+
+    &__info-link {
         margin-right: 30px;
         padding-left: 28px;
         position: relative;
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             left: 0;
@@ -2077,56 +2127,68 @@ footer {
             height: 16px;
         }
     }
-    &__info-link--autor::before{
+
+    &__info-link--autor::before {
         background-image: url('../images/icons/User-accent.svg');
     }
-    &__info-link--comment::before{
+
+    &__info-link--comment::before {
         background-image: url('../images/icons/Comment--accent.svg');
         top: 2px;
     }
-    .comment-form{
+
+    .comment-form {
         border-bottom: none;
     }
-    &__box{
+
+    &__box {
         display: flex;
         justify-content: space-between;
         margin: 25px 0 35px;
     }
+
     &__tags,
-    &__share{
-        span{
+    &__share {
+        span {
             text-transform: uppercase;
             color: $title;
         }
     }
-    &__share{
+
+    &__share {
         margin-right: 25px;
-        a{
+
+        a {
             margin: 0 6px;
             vertical-align: middle;
-            path{
+
+            path {
                 fill: #727272;
             }
-            &:hover{
-                path{
+
+            &:hover {
+                path {
                     fill: $accent;
                 }
             }
         }
     }
-    &__author{
+
+    &__author {
         border-bottom: 1px solid #ececec;
         padding-bottom: 40px;
         margin-bottom: 40px;
         display: flex;
     }
-    &__author-img{
+
+    &__author-img {
         margin-right: 30px;
         width: 140px;
         height: 140px;
         object-fit: cover;
     }
-    &__author-name{
+
+    &__author-name {
         color: $title;
         @extend %roboto-500;
         font-size: 22px;
@@ -2134,5 +2196,138 @@ footer {
         margin-top: 10px;
     }
 }
+
+.map {
+    padding: 120px 0;
+}
+
+#map {
+    width: 100%;
+    height: 450px;
+}
+
+.contact {
+    padding-bottom: 120px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__info {
+        width: 370px;
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    &__info-title {
+        @extend %roboto-700;
+        font-size: 48px;
+        line-height: 58px;
+        color: $title;
+        margin-bottom: 20px;
+    }
+
+    &__info-text {
+        margin-bottom: 60px;
+    }
+
+    &__info-item {
+        margin-top: 55px;
+        color: $title;
+        padding-left: 80px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            top: -5px;
+            box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+            background-repeat: no-repeat;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 20px;
+            top: 15px;
+            background-image: url('../images/icons/phone-icon.svg');
+        }
+    }
+
+    &__info-phone {
+        display: block;
+        color: $title;
+    }
+
+    &__info-item--location {
+
+        &::after {
+            width: 14px;
+            left: 23px;
+            background-image: url('../images/icons/location-icon.svg');
+        }
+    }
+
+    &__info-item--email {
+        &::after {
+            width: 18px;
+            left: 21px;
+            background-image: url('../images/icons/mail-icon.svg');
+        }
+    }
+
+    &__form {
+        max-width: 690px;
+        width: 100%;
+        padding: 60px 40px;
+        box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+    }
+
+    &__form-title {
+        color: $title;
+        @extend %roboto-700;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    &__form-input {
+        display: block;
+        width: 642px;
+        height: 60px;
+        background-color: $bg;
+        border: none;
+        padding: 0 24px;    
+        margin-bottom: 30px;
+    }
+
+    &__form-textarea {
+        max-width: 642px;
+        width: 100%;
+        display: block;
+        resize: none;
+        height: 200px;
+        background-color: $bg;
+        border: none;
+        padding: 24px;
+        margin-bottom: 30px;
+    }
+    &__form-box{
+        display: flex;
+        justify-content: space-between;
+        input{
+            max-width: 282px;
+        }
+    }
+    &__form-btn{
+        @extend %btn;
+        border: none;
+    }
+}
+
 
 @import 'media';
