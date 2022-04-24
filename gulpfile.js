@@ -4,6 +4,8 @@ const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
+const nunjucksRender = require('gulp-nunjucks-render');
+const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 
@@ -17,11 +19,20 @@ function browsersync() {
     })
 };
 
+function nunjucks(){
+    return src('app/*.njk')
+    .pipe(nunjucksRender())
+    .pipe(dest('app'))
+    .pipe(browserSync.stream())
+}
 
 function Styles() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
     .pipe(scss({outputStyle: 'compressed'}))
-    .pipe(concat('style.min.css'))
+    // .pipe(concat())
+    .pipe(rename({
+        suffix : '.min'
+    }))
     .pipe(autoprefixer({overrideBrowserslist: ['last 10 versions'],
     grid: true
     }))
@@ -32,6 +43,11 @@ function Styles() {
     function scripts(){
         return src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/slick-carousel/slick/slick.js',
+            'node_modules/rateyo/src/jquery.rateyo.js',
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+            'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+            'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
             'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -71,6 +87,7 @@ function cleanDist(){
 
 function watching(){
     watch(['app/scss/**/*.scss'], Styles);
+    watch(['app/*.njk'], nunjucks);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -81,6 +98,7 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.nunjucks = nunjucksRender;
 
-exports.default = parallel(Styles, scripts, browsersync, watching);
+exports.default = parallel(nunjucks, Styles, scripts, browsersync, watching);
 exports.build = series(cleanDist, images, build); 
