@@ -41,6 +41,7 @@ ol[class] {
   textarea,
   select {
     font: inherit;
+    box-sizing: border-box;
   }
 
   a{
